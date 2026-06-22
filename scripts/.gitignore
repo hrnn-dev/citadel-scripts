@@ -1,0 +1,10 @@
+#Secretos y claves.
+*.key
+*.pem
+*id_rsa*
+*.log
+
+#Entornos virtuales o temporales
+__pycache__/
+*.pyc
+.env
