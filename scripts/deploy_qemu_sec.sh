@@ -24,3 +24,6 @@ virt-install \
     --location http://deb.debian.org/debian/dists/bookworm/main/installer-amd64/ \
     --extra-args="console=tty0 console=ttyS0,115200n8" \
     --graphics none
+    --serial pty \
+    --console pty,target_type=serial \
+    --extra-args="console=ttyS0,115200n8"
