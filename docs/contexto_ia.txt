@@ -1,0 +1,7 @@
+[REANUDAR LABORATORIO DE SEGURIDAD]
+Hola. Quiero continuar el laboratorio de pivoting y hardening. 
+Topología: Host 'Spectre' (KVM/Libvirt), C2 'Citadel' (192.168.122.140, fuera del sandbox) y Target Hardened 'Karnak' (10.0.0.61, dentro de sandbox 'virbr1').
+Código: Beacon iterativo en C compiled con flags de seguridad (-fPIE, -z noexecstack).
+Estado actual: Logramos comunicación transparente configurando iptables/forwarding en Spectre y ruta estática en Citadel. El beacon conectó con éxito a Netcat porque el nftables de Karnak tiene la cadena OUTPUT en ACCEPT.
+Siguiente paso: Configurar filtrado de salida (egress filtering) en Karnak para bloquear el beacon.
+
